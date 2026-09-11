@@ -32,7 +32,7 @@ for p in (gen,classes,dex):
 run(tool('aapt2'),'compile','--dir',root/'app/src/main/res','-o',out/'resources.zip')
 run(tool('aapt2'),'link','-o',out/'unsigned.apk','-I',platform,'--manifest',root/'app/src/main/AndroidManifest.xml','--java',gen,'--min-sdk-version','23','--target-sdk-version','35','--version-code','3','--version-name','3.0.0','-A',root/'app/src/main/assets',out/'resources.zip')
 sources=list((root/'app/src/main/java').rglob('*.java'))+list(gen.rglob('*.java'))
-run('javac','-encoding','UTF-8','-source','8','-target','8','-bootclasspath',platform,'-d',classes,*sources)
+run('javac','-encoding','UTF-8','-source','8','-target','8','-classpath',platform,'-d',classes,*sources)
 run(tool('d8'),'--min-api','23','--lib',platform,'--output',dex,*classes.rglob('*.class'))
 with zipfile.ZipFile(out/'unsigned.apk','a',zipfile.ZIP_DEFLATED) as archive:
  for file in dex.glob('*.dex'):archive.write(file,file.name)
