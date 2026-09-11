@@ -1,0 +1,20 @@
+{
+  "product": "Mầm Mơ",
+  "version": "3.0.0",
+  "website": "https://mam-mo-book-1109.margaretevansa9281.chatgpt.site",
+  "website_status": "published",
+  "android_apk_status": "not_built_missing_sdk_network_approval_cancelled",
+  "ios_ipa_status": "not_built_requires_macos_xcode_and_apple_signing",
+  "github_actions_status": "prepared_not_executed",
+  "contents": {
+    "stories": 503,
+    "bilingual": true,
+    "audio_configuration": true
+  },
+  "checked": [
+    "8 signing validation tests",
+    "Python JavaScript and shell syntax",
+    "XML plist workflow structure",
+    "source archives integrity"
+  ]
+}

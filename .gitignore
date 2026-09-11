@@ -1,0 +1,12 @@
+**/build/
+**/__pycache__/
+**/*.apk
+**/*.ipa
+**/*.p12
+**/*.keystore
+**/*.jks
+**/*.mobileprovision
+**/signing.json
+**/ExportOptions.plist
+**/*.xcarchive/
+**/xcuserdata/
